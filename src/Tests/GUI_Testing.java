@@ -59,6 +59,7 @@ package Tests;
 import algorithms.Graph_Algo;
 import dataStructure.DGraph;
 import dataStructure.Node;
+import gui.GUI_graph;
 import utils.Point3D;
 
 public class GUI_Testing {
@@ -88,8 +89,8 @@ public class GUI_Testing {
         g.connect(6, 5, 15);
         //  g.connect(2, 4, 15);
         ga.init(g);
-//        GUI_graph b = new GUI_graph((DGraph) g);
-//        b.setVisible(true);
+        GUI_graph b = new GUI_graph((DGraph) g);
+        b.setVisible(true);
 //        List <Integer> y = new LinkedList<>();
 //        y.add(4);
 //        y.add(3);

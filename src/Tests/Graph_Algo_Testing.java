@@ -357,16 +357,7 @@ public class Graph_Algo_Testing {
     private graph g=new DGraph();
     private int mc=0;
 
-    @Test
-    void copyGraph() {
 
-        graph currGraph = ga.copy();
-        currGraph.removeNode(1);
-        assertTrue(currGraph.nodeSize() != g.nodeSize());
-
-        assertTrue(currGraph.edgeSize() != g.edgeSize());
-        assertTrue(currGraph != g);
-    }
 
     @Test
     void saveInitFile() {
