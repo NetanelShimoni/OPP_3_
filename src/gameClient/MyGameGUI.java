@@ -300,6 +300,10 @@ public class MyGameGUI extends Thread {
             game.move();
             count++;
         }
+        if(count>150 && num_game==13){
+            count++;
+            game.move();
+        }
         if(num_game == 11)
         {
             dt=0;
@@ -308,6 +312,15 @@ public class MyGameGUI extends Thread {
               game.move();
               count++;
           }
+          if(count>450){
+              count++;
+              game.move();
+          }
+
+            if(count>530){
+                count++;
+                game.move();
+            }
         }
         if (num_game == 3) {
             if (short1.get(0).getKey()==8 || short1.get(0).getKey()==9){
@@ -533,7 +546,7 @@ public static int id_integer=0;
         StdDraw.picture(0, 0, "ddd.jpg");
         String id =JOptionPane.showInputDialog(new ImageIcon("robot.jpg"), "Input your Id to login game");
          id_integer = Integer.parseInt(id);
-        System.out.println( "LOGIN:  "+Game_Server.login(208240788));
+        System.out.println( "LOGIN:  "+Game_Server.login(208240788) +"this is my id: "+id_integer);
         String s = JOptionPane.showInputDialog(new ImageIcon("robot.jpg"), "Choose a fild game");
         num_game = Integer.parseInt(s);
         System.out.println(num_game);

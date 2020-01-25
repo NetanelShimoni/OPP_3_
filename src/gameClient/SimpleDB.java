@@ -180,18 +180,20 @@ public class SimpleDB {
             }
             System.out.println(s);
             StdDraw.text(150,120,"we place on class: " + placeInClass,3);
+                                                                                                                                     //  s="level: 0 score: 147\n" + "level: 1 score: 441\n" + "level: 3 score: 723\n" + "level: 5 score: 592\n" + "level: 9 score: 483\n" + "level: 11 score: 1073\n" + "level: 13 score: 323\n" + "level: 16 score: 243\n" + "level: 19 score: 254\n" + "level: 20 score: 203\n" + "level: 23 score: 1011\n";
+
             //Object game_select = JOptionPane.showInputDialog(null, "Choose a mood", "Note", JOptionPane.INFORMATION_MESSAGE, new ImageIcon("robot_tec.jpg"), p, p[0]);
-            JOptionPane.showMessageDialog(null,"Current game: " + Level + "\n Your grade is: "+MyGameGUI.gradeofgame+       "\n Place on class: " +
+            JOptionPane.showMessageDialog(null, "Current game: " + Level + "\n Your grade is: "+MyGameGUI.gradeofgame+       "\n Place on class: " +
                     "" + placeInClass+
                     "\n High value of this game: " +
-                    "" + value + "\n Num of game we play (this game): " + howManyGame+"\nyour score in every game until now:"+s.toString());
+                    "" + value + "\n Num of game we play (this game): " + howManyGame);
 //            JOptionPane.showMessageDialog(null,"your score in game 0 is:\n");
             System.err.println("\n We place on class: " + placeInClass);
 
                 System.err.println("high value of this game " + value);
                 System.err.println("num of game we play: " + howManyGame);
 
-                MyGameGUI.t1.join();
+                //MyGameGUI.t1.join();
 
 			System.out.println("*********KML IS************");
 			String kml=getKML(MyGameGUI.id_integer,MyGameGUI.num_game);
@@ -205,10 +207,8 @@ public class SimpleDB {
             System.out.println("Vendor Error: " + sqle.getErrorCode());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+        }
+    }
 
     /**
      * this function returns the KML string as stored in the database (userID, level);
